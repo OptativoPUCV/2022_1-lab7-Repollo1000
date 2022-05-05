@@ -64,7 +64,7 @@ void heap_pop(Heap* pq){
   int talla = pq->size;
 
   pq->size = talla+1;
-  for(i = 0 ; pq->size > i ; i+)
+  for(i = 0 ; pq->size > i ; i++)
   {
     int posActual = i - 1;
     int padre = (posActual - 1)/2;
