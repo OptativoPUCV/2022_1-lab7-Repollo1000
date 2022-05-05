@@ -61,38 +61,36 @@ void heap_push(Heap* pq, void* data, int priority){
 
 void heap_pop(Heap* pq){
   int talla = pq->size;
-
   int auxPrio = pq->heapArray[talla -1].priority;
   void* auxData = pq->heapArray[talla -1].data;
-  
   for(int i = 0; i < talla-1; i++)
   {
     printf(" %d",pq->heapArray[i].priority);
   }
+  
   printf("\n");
   pq->heapArray[talla].priority = pq->heapArray[0].priority;
   pq->heapArray[talla].data = pq->heapArray[0].data;
-
   pq->heapArray[0].priority = auxPrio;
   pq->heapArray[0].data = auxData;
-  
   pq->heapArray[talla -1].priority = 0;
   pq->heapArray[talla -1].data = NULL;
-
   pq->size = talla - 1;
+  
   for(int i = 0; i < talla-1; i++)
   {
     printf(" %d",pq->heapArray[i].priority);
   }
   printf("\n");
   
-  for(int i = 0 ; i <= pq->size ; i++)
+  for(int i = 0 ; i < pq->size ; i++)
   {
-    printf(" %d",pq->heapArray[i].priority);
+    //printf(" %d",pq->heapArray[i].priority);
     i = i + 1;
     int hijos = (2*i + 1);
     if(pq->heapArray[i].priority > pq->heapArray[hijos].priority)
     {
+      printf(" %d",pq->heapArray[i].priority);
       int auxPrio = pq->heapArray[hijos].priority;
       void* auxData = pq->heapArray[hijos].data;
       pq->heapArray[hijos].priority = pq->heapArray[i].priority;
