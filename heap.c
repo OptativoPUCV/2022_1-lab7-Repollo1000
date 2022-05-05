@@ -82,12 +82,16 @@ void heap_pop(Heap* pq){
     printf(" %d",pq->heapArray[i].priority);
   }
   printf("\n");
-  
+  int posmay;
   for(int i = 0 ; i < pq->size-1 ; i++)
   {
     //printf(" %d",pq->heapArray[i].priority);
     i = i + 1;
     int hijos = (2*i + 1);
+    //buscar mayor
+    if(pq->heapArray[i].priority > pq->heapArray[hijos].priority)
+      posmay = i;
+    /*
     if(pq->heapArray[i].priority > pq->heapArray[hijos].priority)
     {
       printf(" %d",pq->heapArray[i].priority);
@@ -98,7 +102,9 @@ void heap_pop(Heap* pq){
       pq->heapArray[i].priority = auxPrio;
       pq->heapArray[i].data = auxData;
     }
+    */
   }
+  printf("%d",posmay);
 
 
 }  
