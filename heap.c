@@ -92,10 +92,10 @@ void heap_pop(Heap* pq){
       posmay = i;
       auxPrio = pq->heapArray[0].priority;
       auxData = pq->heapArray[0].data;
-      pq->heapArray[0].priority = pq->heapArray[posmay-1].priority;
-      pq->heapArray[0].data = pq->heapArray[posmay-1].data;
-      pq->heapArray[posmay-1].priority = auxPrio;
-      pq->heapArray[posmay-1].data = auxData;
+      pq->heapArray[0].priority = pq->heapArray[posmay].priority;
+      pq->heapArray[0].data = pq->heapArray[posmay].data;
+      pq->heapArray[posmay].priority = auxPrio;
+      pq->heapArray[posmay].data = auxData;
     }
     if(pq->heapArray[i].priority < pq->heapArray[hijo2].priority)
     {
