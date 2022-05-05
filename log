@@ -251,3 +251,14 @@ heap.c:65:7: error: unused variable ‘posActual’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 a45117f
+Thu May  5 15:40:00 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:63:7: error: unused variable ‘i’ [-Werror=unused-variable]
+   int i = 0;
+       ^
+cc1: all warnings being treated as errors
+Compilation failed
+5e89a82
