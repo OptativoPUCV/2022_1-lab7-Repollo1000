@@ -16,7 +16,6 @@ typedef struct Heap{
   int capac;
 } Heap;
 
-
 void* heap_top(Heap* pq){
   
   int i = 0;
