@@ -104,7 +104,7 @@ void heap_pop(Heap* pq){
     }
     */
   }
-  printf("%d",posmay);
+  printf("%d pa que",posmay);
 
 
 }  
