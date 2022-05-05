@@ -89,7 +89,7 @@ void heap_pop(Heap* pq){
     i = i + 1;
     int hijos = (2*i + 1);
     //buscar mayor
-    if(pq->heapArray[i].priority > pq->heapArray[hijos].priority)
+    if(pq->heapArray[i].priority < pq->heapArray[hijos].priority)
       posmay = i;
     /*
     if(pq->heapArray[i].priority > pq->heapArray[hijos].priority)
