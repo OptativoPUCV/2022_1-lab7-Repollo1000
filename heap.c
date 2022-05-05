@@ -100,6 +100,11 @@ void heap_pop(Heap* pq){
       pq->heapArray[i].data = auxData;
     }
   }
+  for(int i = 0; i < talla-1; i++)
+  {
+    printf(" %d",pq->heapArray[i].priority);
+  }
+  printf("\n");
 
 }  
 
