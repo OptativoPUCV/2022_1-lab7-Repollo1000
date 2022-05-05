@@ -48,3 +48,20 @@ heap.c:54:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 e954f53
+Thu May  5 03:19:18 UTC 2022: 
+ heap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:0:
+heap.c: In function ‘createHeap’:
+heap.c:53:20: error: statement with no effect [-Werror=unused-value]
+   new->heapArray[0].data
+   ~~~~~~~~~~~~~~~~~^~~~~
+heap.c:55:4: error: expected ‘;’ before ‘return’
+    return new;
+    ^~~~~~
+heap.c:56:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+8a214e2

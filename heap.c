@@ -18,6 +18,7 @@ typedef struct Heap{
 
 
 void* heap_top(Heap* pq){
+  /*
   int i = 1;
   int posPrioridad = 0;
   while(pq->size < i)
@@ -27,6 +28,7 @@ void* heap_top(Heap* pq){
     i++;
     
   }
+  */
   return NULL;
 }
 
