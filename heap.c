@@ -18,14 +18,17 @@ typedef struct Heap{
 
 
 void* heap_top(Heap* pq){
+  
+  int i = 0;
+  int aux = 0;
+  if(pq->size == 0)
+    return NULL;
+  else
+    return pq->heapArray[i].data;
   /*
-  int i = 1;
-  int posPrioridad = 0;
-  while(pq->size < i)
+  for(i = 0 ; i < pq->size ; i++)
   {
-    if(pq->heapArray[i].priority > pq->heapArray[i-1].priority)
-        posPrioridad = i;
-    i++;
+    if(pq->heapArray[i].priority > pq->heapArray[i].priority)
     
   }
   */
