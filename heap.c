@@ -91,19 +91,15 @@ void heap_pop(Heap* pq){
     //buscar mayor
     if(pq->heapArray[i].priority < pq->heapArray[hijos].priority)
       posmay = i;
-    /*
-    if(pq->heapArray[i].priority > pq->heapArray[hijos].priority)
-    {
-      printf(" %d",pq->heapArray[i].priority);
-      int auxPrio = pq->heapArray[hijos].priority;
-      void* auxData = pq->heapArray[hijos].data;
-      pq->heapArray[hijos].priority = pq->heapArray[i].priority;
-      pq->heapArray[hijos].data = pq->heapArray[i].data;
-      pq->heapArray[i].priority = auxPrio;
-      pq->heapArray[i].data = auxData;
-    }
-    */
   }
+ 
+  auxPrio = pq->heapArray[0].priority;
+  auxData = pq->heapArray[0].data;
+  pq->heapArray[0].priority = pq->heapArray[posmay-1].priority;
+  pq->heapArray[0].data = pq->heapArray[posmay-1].data;
+  pq->heapArray[posmay-1].priority = auxPrio;
+  pq->heapArray[posmay-1].data = auxData;
+    
   printf("%d pa que",posmay);
 
 
