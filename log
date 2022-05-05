@@ -98,3 +98,14 @@ Thu May  5 03:32:00 UTC 2022:
  tests:  2|2
 total_score: 20/70
 27b7ac7
+Thu May  5 13:31:01 UTC 2022: 
+ heap.c | 27 +++++++++++++++++++++------
+ 1 file changed, 21 insertions(+), 6 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:39:35: error: ‘p’ undeclared (first use in this function)
+   pq->heapArray[talla].priority = p;
+                                   ^
+heap.c:39:35: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+996c0b5

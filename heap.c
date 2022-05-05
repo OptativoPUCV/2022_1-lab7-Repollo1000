@@ -25,19 +25,34 @@ void* heap_top(Heap* pq){
     return NULL;
   else
     return pq->heapArray[i].data;
-  /*
-  for(i = 0 ; i < pq->size ; i++)
-  {
-    if(pq->heapArray[i].priority > pq->heapArray[i].priority)
-    
-  }
-  */
+
   return NULL;
 }
 
 
 
 void heap_push(Heap* pq, void* data, int priority){
+
+  int i = 0;
+  int talla = pq->size;
+  pq->heapArray[talla].data = data;
+  pq->heapArray[talla].priority = p;
+  pq->size = talla+1;
+  for(i = pq->size-1 ; i>= 0 ; i--)
+  {
+    int posActual = i - 1;
+    int posPro = (posActual - 1)/2;
+    if(pq->heapArray[posActual].priority > pq->heapArray[posPro].priority)
+    {
+      int auxPrio = pq->heapArray[posPro].priority;
+      void* auxData = pq->heapArray[posPro].data;
+      pq->heapArray[posPro].priority = pq->heapArray[posActual].priority;
+      pq->heapArray[posPro].data = pq->heapArray[posActual].data;
+      pq->heapArray[posActual].priority = auxPrio;
+      pq->heapArray[posActual].data = auxData;
+      
+    }
+  }
 
 }
 
