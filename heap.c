@@ -80,7 +80,7 @@ void heap_pop(Heap* pq){
   {
     int posActual = i - 1;
     int padre = (posActual - 1)/2;
-    if(pq->heapArray[posActual].priority < pq->heapArray[padre].priority)
+    if(pq->heapArray[posActual].priority > pq->heapArray[padre].priority)
     {
       int auxPrio = pq->heapArray[padre].priority;
       void* auxData = pq->heapArray[padre].data;
