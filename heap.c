@@ -108,6 +108,7 @@ void heap_pop(Heap* pq){
       pq->heapArray[posmay-1].data = auxData;
       
     }
+    posmay = 0;
 
   }
     
