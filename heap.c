@@ -111,6 +111,11 @@ void heap_pop(Heap* pq){
     posmay = 0;
 
   }
+    for(int i = 0; i < talla-1; i++)
+  {
+    printf(" %d",pq->heapArray[i].priority);
+  }
+  printf("\n");
     
   //printf("%d pa que",posmay);
 
