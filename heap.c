@@ -63,7 +63,7 @@ void heap_pop(Heap* pq){
   int i = 0;
   int talla = pq->size;
   int posActual = i - 1;
-  int padre = (posActual - 1)/2; 
+  //int padre = (posActual - 1)/2; 
   
   int auxPrio = pq->heapArray[talla -1].priority;
   void* auxData = pq->heapArray[talla -1].data;
