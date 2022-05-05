@@ -50,7 +50,7 @@ void heap_push(Heap* pq, void* data, int priority){
       pq->heapArray[padre].data = pq->heapArray[posActual].data;
       pq->heapArray[posActual].priority = auxPrio;
       pq->heapArray[posActual].data = auxData;
-      pq->capac = pq->capac*2+1;
+      pq->capac = (pq->capac*2)+1;
       pq->heapArray = (heapElem*)realloc(pq->heapArray, pq->capac*sizeof(heapElem));
       
     }
