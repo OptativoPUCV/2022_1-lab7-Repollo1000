@@ -83,7 +83,7 @@ void heap_pop(Heap* pq){
   }
   printf("\n");
   
-  for(int i = 0 ; i < pq->size ; i++)
+  for(int i = 0 ; i < pq->size-1 ; i++)
   {
     //printf(" %d",pq->heapArray[i].priority);
     i = i + 1;
