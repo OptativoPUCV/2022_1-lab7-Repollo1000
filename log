@@ -209,3 +209,17 @@ Thu May  5 15:20:00 UTC 2022:
  tests:  7|1
 total_score: 45/70
 91e908f
+Thu May  5 15:28:03 UTC 2022: 
+ heap.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:67:32: error: expected expression before ‘)’ token
+   for(i = 0 ; pq->size > i ; i+)
+                                ^
+heap.c:70:18: error: ‘posActual’ undeclared (first use in this function)
+     int padre = (posActual - 1)/2;
+                  ^~~~~~~~~
+heap.c:70:18: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+e1781c7

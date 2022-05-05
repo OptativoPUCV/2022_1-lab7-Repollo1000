@@ -39,8 +39,6 @@ void heap_push(Heap* pq, void* data, int priority){
     pq->capac = (pq->capac*2)+1;
     pq->heapArray = (heapElem*)realloc(pq->heapArray, pq->capac*sizeof(heapElem)); 
   }
-
-  
   pq->heapArray[talla].data = data;
   pq->heapArray[talla].priority = priority;
   pq->size = talla+1;
@@ -56,16 +54,31 @@ void heap_push(Heap* pq, void* data, int priority){
       pq->heapArray[padre].data = pq->heapArray[posActual].data;
       pq->heapArray[posActual].priority = auxPrio;
       pq->heapArray[posActual].data = auxData;
-      
     }
   }
-
 }
 
 
 void heap_pop(Heap* pq){
+  int i = 0;
+  int talla = pq->size;
 
-}
+  pq->size = talla+1;
+  for(i = 0 ; pq->size > i ; i+)
+  {
+    int posActual = i - 1;
+    int padre = (posActual - 1)/2;
+    if(pq->heapArray[posActual].priority < pq->heapArray[padre].priority)
+    {
+      int auxPrio = pq->heapArray[padre].priority;
+      void* auxData = pq->heapArray[padre].data;
+      pq->heapArray[padre].priority = pq->heapArray[posActual].priority;
+      pq->heapArray[padre].data = pq->heapArray[posActual].data;
+      pq->heapArray[posActual].priority = auxPrio;
+      pq->heapArray[posActual].data = auxData;
+    }
+  }
+}  
 
 Heap* createHeap(){
   
@@ -73,12 +86,10 @@ Heap* createHeap(){
   new->capac = 3;
   new->size = 0;
   new->heapArray = (heapElem *)malloc(3*sizeof(heapElem));
-  
   for(int i ; i < new->capac ; i++)
   {
     new->heapArray[i].data = NULL;
     new->heapArray[i].priority = 0;
   }
-  
-   return new;
+  return new;
 }
