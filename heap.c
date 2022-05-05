@@ -50,7 +50,7 @@ Heap* createHeap(){
   new->size = 0;
   new->heapArray = (heapElem *)malloc(sizeof(heapElem));
   
-  new->heapArray[0].data
+  //new->heapArray[0].data
   
    return new;
 }
