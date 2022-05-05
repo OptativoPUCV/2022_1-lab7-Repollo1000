@@ -63,6 +63,7 @@ void heap_pop(Heap* pq){
   int talla = pq->size;
   int auxPrio = pq->heapArray[talla -1].priority;
   void* auxData = pq->heapArray[talla -1].data;
+  int posmay = 0;
 
   
   printf("\n");
@@ -79,7 +80,6 @@ void heap_pop(Heap* pq){
     printf(" %d",pq->heapArray[i].priority);
   }
   printf("\n");
-  int posmay;
   for(int i = 0 ; i < pq->size ; i++)
   {
     //printf(" %d",pq->heapArray[i].priority);
