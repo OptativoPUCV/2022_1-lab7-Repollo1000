@@ -34,6 +34,13 @@ void heap_push(Heap* pq, void* data, int priority){
 
   int i = 0;
   int talla = pq->size;
+  if(pq->capac == pq->size)
+  {
+    pq->capac = (pq->capac*2)+1;
+    pq->heapArray = (heapElem*)realloc(pq->heapArray, pq->capac*sizeof(heapElem)); 
+  }
+
+  
   pq->heapArray[talla].data = data;
   pq->heapArray[talla].priority = priority;
   pq->size = talla+1;
@@ -49,8 +56,6 @@ void heap_push(Heap* pq, void* data, int priority){
       pq->heapArray[padre].data = pq->heapArray[posActual].data;
       pq->heapArray[posActual].priority = auxPrio;
       pq->heapArray[posActual].data = auxData;
-      pq->capac = (pq->capac*2)+1;
-      pq->heapArray = (heapElem*)realloc(pq->heapArray, pq->capac*sizeof(heapElem));
       
     }
   }
