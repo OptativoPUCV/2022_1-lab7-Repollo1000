@@ -78,7 +78,6 @@ void heap_pop(Heap* pq){
 
   for(int i = 0 ; i < pq->size ; i++)
   {
-    //int posActual = i + 1 ;
     int hijos = (2*i + 1);
     if(pq->heapArray[i].priority < pq->heapArray[hijos].priority)
     {
