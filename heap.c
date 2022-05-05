@@ -36,7 +36,7 @@ void heap_push(Heap* pq, void* data, int priority){
   int i = 0;
   int talla = pq->size;
   pq->heapArray[talla].data = data;
-  pq->heapArray[talla].priority = p;
+  pq->heapArray[talla].priority = priority;
   pq->size = talla+1;
   for(i = pq->size-1 ; i>= 0 ; i--)
   {
