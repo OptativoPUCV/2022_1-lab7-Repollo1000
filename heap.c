@@ -89,7 +89,7 @@ void heap_pop(Heap* pq){
     //buscar mayor
     if(pq->heapArray[i].priority < pq->heapArray[hijo1].priority)
     {
-      posmay = i;
+      posmay = i + 1;
       auxPrio = pq->heapArray[0].priority;
       auxData = pq->heapArray[0].data;
       pq->heapArray[0].priority = pq->heapArray[posmay].priority;
