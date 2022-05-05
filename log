@@ -121,3 +121,33 @@ Thu May  5 13:38:26 UTC 2022:
  tests:  5|2
 total_score: 35/70
 ca99f6b
+Thu May  5 13:39:39 UTC 2022: 
+ heap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:53:63: error: expected ‘)’ before ‘;’ token
+       pq->heapArray = (heapElem *)realloc((3*sizeof(heapElem));
+                                                               ^
+heap.c:53:43: error: passing argument 1 of ‘realloc’ makes pointer from integer without a cast [-Werror=int-conversion]
+       pq->heapArray = (heapElem *)realloc((3*sizeof(heapElem));
+                                           ^
+In file included from test.c:2:0:
+/usr/include/stdlib.h:549:14: note: expected ‘void *’ but argument is of type ‘long unsigned int’
+ extern void *realloc (void *__ptr, size_t __size)
+              ^~~~~~~
+In file included from test.c:4:0:
+heap.c:53:35: error: too few arguments to function ‘realloc’
+       pq->heapArray = (heapElem *)realloc((3*sizeof(heapElem));
+                                   ^~~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:549:14: note: declared here
+ extern void *realloc (void *__ptr, size_t __size)
+              ^~~~~~~
+In file included from test.c:4:0:
+heap.c:55:5: error: expected ‘;’ before ‘}’ token
+     }
+     ^
+cc1: all warnings being treated as errors
+Compilation failed
+89e6ce1
