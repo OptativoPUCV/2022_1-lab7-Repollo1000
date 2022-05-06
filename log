@@ -483,3 +483,14 @@ Thu May  5 23:54:27 UTC 2022:
  tests:  7|1
 total_score: 50/70
 3cefd31
+Fri May  6 00:05:44 UTC 2022: 
+ heap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:83:7: error: unused variable ‘i’ [-Werror=unused-variable]
+   int i = 0 ;
+       ^
+cc1: all warnings being treated as errors
+Compilation failed
+05e1fda
