@@ -61,6 +61,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
 void heap_pop(Heap* pq){
   int talla = pq->size;
+  
   int auxPrio = pq->heapArray[talla -1].priority;
   void* auxData = pq->heapArray[talla -1].data;
   //int posmay = 0;
@@ -87,8 +88,8 @@ void heap_pop(Heap* pq){
     i = i + 1;
     int hijo1 = (2*i + 1);
     int hijo2 = (2*i + 2);
-    auxPrio = pq->heapArray[0].priority;
-    auxData = pq->heapArray[0].data;
+    auxPrio = pq->heapArray[i].priority;
+    auxData = pq->heapArray[i].data;
     
     if(hijo1 > talla)
         pq->heapArray[hijo1].priority = 0;
@@ -120,14 +121,12 @@ void heap_pop(Heap* pq){
       }
       else
         break;
-      {
-        printf("  %d  ",pq->heapArray[i].priority);
-      }
     }
     else
       break;
   }
-    for(int i = 0; i < talla-1; i++)
+  
+  for(int i = 0; i < talla-1; i++)
   {
     printf(" %d",pq->heapArray[i].priority);
   }
