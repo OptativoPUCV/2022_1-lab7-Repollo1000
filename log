@@ -511,3 +511,20 @@ Fri May  6 00:06:20 UTC 2022:
  tests:  7|1
 total_score: 50/70
 0ba8e9f
+Sat May  7 00:34:18 UTC 2022: 
+ heap.c | 33 ++++++++++++++++++---------------
+ 1 file changed, 18 insertions(+), 15 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:95:36: error: self-comparison always evaluates to false [-Werror=tautological-compare]
+       if(pq->heapArray[i].priority < pq->heapArray[i].priority)
+                                    ^
+heap.c:106:36: error: self-comparison always evaluates to false [-Werror=tautological-compare]
+       if(pq->heapArray[i].priority < pq->heapArray[i].priority)
+                                    ^
+heap.c:66:7: error: variable ‘posmay’ set but not used [-Werror=unused-but-set-variable]
+   int posmay = 0;
+       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d86ab3e
