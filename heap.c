@@ -85,7 +85,6 @@ void heap_pop(Heap* pq){
   for(int i = 0 ; i < pq->size ; i++)
   {
     //printf(" %d",pq->heapArray[i].priority);
-    i = i + 1;
     int hijo1 = (2*i + 1);
     int hijo2 = (2*i + 2);
     int auxPrio2 = pq->heapArray[i].priority;
