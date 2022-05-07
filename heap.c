@@ -90,9 +90,11 @@ void heap_pop(Heap* pq){
     auxPrio = pq->heapArray[0].priority;
     auxData = pq->heapArray[0].data;
     
-    
-    
-    
+    if(hijo1 > talla)
+        pq->heapArray[hijo1].priority = 0;
+    if(hijo2 > talla)
+      pq->heapArray[hijo2].priority = 0;
+
     if(pq->heapArray[hijo2].priority < pq->heapArray[hijo1].priority)
     {
       if(pq->heapArray[i].priority < pq->heapArray[hijo1].priority)
