@@ -100,6 +100,8 @@ void heap_pop(Heap* pq){
         pq->heapArray[hijo1].data = auxData;  
         
       }
+      else
+        break;
     }
     if(pq->heapArray[hijo2].priority < pq->heapArray[hijo1].priority)
     {
@@ -111,6 +113,8 @@ void heap_pop(Heap* pq){
         pq->heapArray[hijo2].data = auxData;  
         
       }
+      else
+        break;
       {
         printf("  %d  ",pq->heapArray[i].priority);
       }
