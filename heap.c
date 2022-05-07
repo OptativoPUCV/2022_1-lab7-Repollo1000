@@ -88,8 +88,8 @@ void heap_pop(Heap* pq){
     i = i + 1;
     int hijo1 = (2*i + 1);
     int hijo2 = (2*i + 2);
-    auxPrio = pq->heapArray[i].priority;
-    auxData = pq->heapArray[i].data;
+    int auxPrio2 = pq->heapArray[i].priority;
+    void *auxData2 = pq->heapArray[i].data;
     
     if(hijo1 > talla)
         pq->heapArray[hijo1].priority = 0;
@@ -102,8 +102,8 @@ void heap_pop(Heap* pq){
       {
         pq->heapArray[i].priority = pq->heapArray[hijo1].priority;
         pq->heapArray[i].data = pq->heapArray[hijo1].data;
-        pq->heapArray[hijo1].priority = auxPrio;
-        pq->heapArray[hijo1].data = auxData;  
+        pq->heapArray[hijo1].priority = auxPrio2;
+        pq->heapArray[hijo1].data = auxData2;  
         i = hijo1;
       }
       else
@@ -115,8 +115,8 @@ void heap_pop(Heap* pq){
       {
         pq->heapArray[i].priority = pq->heapArray[hijo2].priority;
         pq->heapArray[i].data = pq->heapArray[hijo2].data;
-        pq->heapArray[hijo2].priority = auxPrio;
-        pq->heapArray[hijo2].data = auxData;  
+        pq->heapArray[hijo2].priority = auxPrio2;
+        pq->heapArray[hijo2].data = auxData2;  
         i = hijo2;
       }
       else
