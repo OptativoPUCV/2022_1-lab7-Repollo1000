@@ -119,6 +119,8 @@ void heap_pop(Heap* pq){
         printf("  %d  ",pq->heapArray[i].priority);
       }
     }
+    else
+      break;
   }
     for(int i = 0; i < talla-1; i++)
   {
