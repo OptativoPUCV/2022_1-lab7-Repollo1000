@@ -76,11 +76,6 @@ void heap_pop(Heap* pq){
   pq->heapArray[talla -1].data = NULL;
   pq->size = talla - 1;
   
-  for(int i = 0; i < talla-1; i++)
-  {
-    printf(" %d",pq->heapArray[i].priority);
-  }
-  printf("\n");
   //int i = 0 ;
   for(int i = 0 ; i < pq->size-1 ; i++)
   {
