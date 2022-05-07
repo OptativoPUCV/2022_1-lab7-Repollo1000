@@ -106,7 +106,7 @@ void heap_pop(Heap* pq){
       else
         break;
     }
-    else if(pq->heapArray[hijo2].priority < pq->heapArray[hijo1].priority)
+    else if(pq->heapArray[hijo1].priority < pq->heapArray[hijo2].priority)
     {
       if(pq->heapArray[i].priority < pq->heapArray[hijo2].priority)
       {
