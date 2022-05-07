@@ -103,7 +103,7 @@ void heap_pop(Heap* pq){
         pq->heapArray[i].data = pq->heapArray[hijo1].data;
         pq->heapArray[hijo1].priority = auxPrio;
         pq->heapArray[hijo1].data = auxData;  
-        
+        i = hijo1;
       }
       else
         break;
@@ -116,7 +116,7 @@ void heap_pop(Heap* pq){
         pq->heapArray[i].data = pq->heapArray[hijo2].data;
         pq->heapArray[hijo2].priority = auxPrio;
         pq->heapArray[hijo2].data = auxData;  
-        
+        i = hijo2;
       }
       else
         break;
