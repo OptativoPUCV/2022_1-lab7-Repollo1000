@@ -63,7 +63,7 @@ void heap_pop(Heap* pq){
   int talla = pq->size;
   int auxPrio = pq->heapArray[talla -1].priority;
   void* auxData = pq->heapArray[talla -1].data;
-  int posmay = 0;
+  //int posmay = 0;
 
   
   printf("\n");
@@ -90,7 +90,7 @@ void heap_pop(Heap* pq){
     auxPrio = pq->heapArray[0].priority;
     auxData = pq->heapArray[0].data;
     //buscar mayor
-    if(pq->heapArray[i].priority < pq->heapArray[hijo1].priority)
+    if(pq->heapArray[hijo1].priority < pq->heapArray[hijo2].priority)
     {
       if(pq->heapArray[i].priority < pq->heapArray[i].priority)
       {
@@ -101,7 +101,7 @@ void heap_pop(Heap* pq){
         
       }
     }
-    if(pq->heapArray[i].priority < pq->heapArray[hijo2].priority)
+    if(pq->heapArray[hijo2].priority < pq->heapArray[hijo1].priority)
     {
       if(pq->heapArray[i].priority < pq->heapArray[i].priority)
       {
